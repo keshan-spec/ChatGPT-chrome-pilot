@@ -1,0 +1,25 @@
+{
+    "name": "My Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "modal.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
