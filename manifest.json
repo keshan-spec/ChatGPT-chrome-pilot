@@ -6,19 +6,37 @@
         "contextMenus",
         "tabs"
     ],
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+    },
     "background": {
         "service_worker": "background.js"
     },
     "content_scripts": [
         {
             "css": [
-                "modal.css"
+                "css/modal.css"
             ],
             "matches": [
                 "<all_urls>"
             ],
             "js": [
-                "contentScript.js"
+                "contentScript.js",
+                "js/utils.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "resources": [
+                "webfonts/*",
+                "css/*.min.css",
+                "js/*.min.js"
             ]
         }
     ]
